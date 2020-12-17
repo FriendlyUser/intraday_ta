@@ -8,8 +8,13 @@ This project contains three parts.
 2. Voila interactive dashboards for my ipython notebooks
 3. Datapane reports to track accuracy automatically generated (low priority TBD)
 
-### 
+### Setup
 
 ```bash
 ./install.sh
 ```
+
+```
+/home/codespace/.conda/envs/myenv/bin/python3
+```
+
