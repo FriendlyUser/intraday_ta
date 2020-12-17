@@ -1,5 +1,6 @@
 import yfinance as yf
 import matplotlib
+import matplotlib.pyplot as plt
 from darts import TimeSeries
 
 from darts.models import (
@@ -13,8 +14,6 @@ from darts.models import (
     Theta,
     FFT
 )
-
-import matplotlib.pyplot as plt
 
 
 def get_prices(stock, start_date="2019-03-03", end_date="2020-12-14"):
