@@ -1,3 +1,4 @@
 ipympl
 u8darts[all]
 ipywidgets
+yfinance
