@@ -1,4 +1,3 @@
-matplotlib
 ipympl
 u8darts[all]
 numpy
