@@ -8,7 +8,7 @@ This project contains three parts.
 2. Voila interactive dashboards for my ipython notebooks
 3. Datapane reports to track accuracy automatically generated (low priority TBD)
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/FriendlyUser/intraday_ta.git/feature/setup-volia?filepath=intraday_ta.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/FriendlyUser/intraday_ta/main?filepath=intraday_ta.ipynb)
 
 ### Setup
 
