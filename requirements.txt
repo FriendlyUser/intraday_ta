@@ -1,3 +1,6 @@
-matplotlib
+ipympl
 u8darts[all]
-dash
+ipywidgets
+yfinance
+pandas-ta
+dataclasses
