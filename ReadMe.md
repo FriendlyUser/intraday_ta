@@ -1,6 +1,6 @@
 ## Setup in Codespaces
 
-Simple technical analysis utilities for me setup in codespaces.
+Some of the charts available on tradingview are locked for penny stocks which is bad for me, since I mainly trade penny stocks. High risk, high reward. For ease of use across platforms, I also run these ipython notebooks in codespaces.
 
 This project contains three parts.
 
@@ -16,6 +16,7 @@ This project contains three parts.
 ./install.sh
 ```
 
+Set python interpreter to
 ```
 /home/codespace/.conda/envs/myenv/bin/python3
 ```
