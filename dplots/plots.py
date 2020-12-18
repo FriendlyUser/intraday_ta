@@ -3,7 +3,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import pandas
 import pandas_ta
-from datetime import date
+from datetime import datetime, timedelta, date
 yf.pdr_override()
 from darts import TimeSeries
 
@@ -20,8 +20,8 @@ from darts.models import (
 )
 
 
-def get_prices(stock, start_date="2019-03-03", end_date=str(date.today())):
-    data = yf.download(stock, start=start_date, end=end_date,
+def get_prices(stock, start_date="2019-03-03", end_date=str(date.today()), interval='1d'):
+    data = yf.download(stock, start=start_date, end=end_date, interval=interval,
                       group_by="ticker")
     data = data.fillna(method='bfill')
     # Drop columns with no entries
@@ -31,9 +31,19 @@ def get_prices(stock, start_date="2019-03-03", end_date=str(date.today())):
     # prices_df.columns = stocks
     return data
 
+def date_n_days_ago(N):
+    return date.today() - timedelta(days=N)
+
+# Can only get short time data in a 60 day range
+def get_prices_day(stock, start_date=str(date_n_days_ago(59)), end_date=str(date.today()), interval = "15m", length=60):
+    data = get_prices(stock, start_date=start_date, end_date=end_date, interval=interval)
+    data.ta.bbands(length=length, append=True)
+    data.ta.rsi(length=length, append=True)
+    return data
+
 # return df and column names of interest
 def get_prices_rsi(stock, start_date="2019-03-03", end_date=str(date.today())):
-    data = get_prices(stock, start_date="2019-03-03", end_date="2020-12-14")
+    data = get_prices(stock, start_date=start_date, end_date=end_date)
     data.ta.bbands(length=20, append=True)
     return data
 
