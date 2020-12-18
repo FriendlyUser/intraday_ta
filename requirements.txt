@@ -2,3 +2,5 @@ ipympl
 u8darts[all]
 ipywidgets
 yfinance
+pandas-ta
+dataclasses
